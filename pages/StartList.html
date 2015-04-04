@@ -1,0 +1,38 @@
+﻿<div class="container-fluid">
+    <div class="row col-xs-12 text-center">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="col-xs-4 text-left">
+                        BIB
+                    </th>
+                    <th class="col-xs-6  text-left">
+                        Name
+                    </th>
+                    <th class="col-xs-2">
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in participants">
+                    <td>
+                        <input type="text" ng-model="p.id" class="form-control" />
+                    </td>
+                    <td>
+                        <input type="text" value="{{p.fName}} {{p.lName}}" class="form-control" />
+                    </td>
+                    <td>
+                        <button ng-click="UpdateName()" class="btn btn-primary btn-sm" ng-model="p.name">Save</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row col-xs-12 text-center">
+        <button class="btn btn-primary btn-sm" ng-click="Add()" value="+ Add">+Add</button>
+        <button class="btn btn-primary btn-sm" ng-click="SyncOnline()" value="Sync Online">Sync Online</button>
+        <button class="btn btn-primary btn-sm" ng-click="StartSession()" value="Start Session">Start Session</button>
+    </div>
+</div>
